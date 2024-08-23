@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "4eba0678-e148-4861-b1ac-27dad5c98ae7",
+		"name": "GORM priority1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37378979"
+	},
+	"item": [
+		{
+			"name": "GET all package data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"best gift\",\r\n  \"sender\": \"nasir\",\r\n  \"receiver\": \"habad\",\r\n  \"sender_location\": \"oman\",\r\n  \"sender_receiver\": \"dubai\",\r\n  \"fee\": 25000,\r\n  \"weight\": 3.75\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KEY}}/api/v1/packages",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET package data by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{KEY}}/api/v1/packages/3",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"packages",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new package data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"great gift\",\r\n  \"sender\": \"alta\",\r\n  \"receiver\": \"acadmey\",\r\n  \"sender_location\": \"australia\",\r\n  \"sender_receiver\": \"fiji\",\r\n  \"fee\": 33000,\r\n  \"weight\": 34.75\r\n}\r\n\r\n\r\n{\r\n  \"name\": \"cool gift\",\r\n  \"sender\": \"firstname\",\r\n  \"receiver\": \"lastname\",\r\n  \"sender_location\": \"malang\",\r\n  \"sender_receiver\": \"surabaya\",\r\n  \"fee\": 25000,\r\n  \"weight\": 3.75\r\n}\r\n\r\n\r\n{\r\n  \"name\": \"cool gift\",\r\n  \"sender\": \"firstname\",\r\n  \"receiver\": \"lastname\",\r\n  \"sender_location\": \"malang\",\r\n  \"sender_receiver\": \"surabaya\",\r\n  \"fee\": 25000,\r\n  \"weight\": 3.75\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KEY}}/api/v1/packages",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update package data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZXhwIjoxNzI0NDMzNDU2fQ.8gftX1FVqlUHbZ0m7ZovoaekI4cejiwrdUeBFXx4-ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"cool gift\",\r\n    \"sender\": \"nasir\",\r\n    \"receiver\": \"habad\",\r\n    \"sender_location\": \"oman\",\r\n    \"sender_receiver\": \"indonesia\",\r\n    \"fee\": 25000,\r\n    \"weight\": 3.75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KEY}}/api/v1/packages/6",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"packages",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete package data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{KEY}}/api/v1/packages/1",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"packages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register  a new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"surabaya@test.com\",\r\n    \"password\": \"898989\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KEY}}/api/v1/register",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alterra@test.com\",\r\n    \"password\": \"898989\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KEY}}/api/v1/login",
+					"host": [
+						"{{KEY}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZXhwIjoxNzI0NDMzNDU2fQ.8gftX1FVqlUHbZ0m7ZovoaekI4cejiwrdUeBFXx4-ko",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "KEY",
+			"value": "http://localhost:1323",
+			"type": "string"
+		},
+		{
+			"key": "user_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZXhwIjoxNzI0NDA2OTg0fQ.C0NFx39MOTRkjD_PpfasDLhOnEyojqtMClVeTvUKfss",
+			"type": "string"
+		}
+	]
+}
